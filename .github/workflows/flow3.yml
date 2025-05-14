@@ -1,0 +1,8 @@
+name: Issues Event 
+on: issues          #One of the official suported events.
+jobs: 
+    output-info:
+        runs-on: ubuntu-latest
+        steps:
+          - name: output event details
+            run: echo "${{ tojson(github.event) }}"
